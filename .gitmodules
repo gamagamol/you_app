@@ -1,0 +1,6 @@
+[submodule "profile-app"]
+	path = profile-app
+	url = https://github.com/gamagamol/you-app-profile.git
+[submodule "messages-app"]
+	path = messages-app
+	url = https://github.com/gamagamol/you-app-messages.git
