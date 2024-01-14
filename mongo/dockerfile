@@ -1,0 +1,11 @@
+# Base image
+FROM mongo
+
+# Custom configuration
+RUN echo "replication:\n  replSetName: rs0" > /etc/mongod.conf
+
+# Copy the initialization script
+COPY mongo.sh /docker-entrypoint-initdb.d/init-replica-set.sh
+
+# Command to run MongoDB
+CMD ["mongod", "--config", "/etc/mongod.conf", "--replSet", "rs0"]

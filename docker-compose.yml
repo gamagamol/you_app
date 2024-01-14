@@ -47,13 +47,20 @@ services:
 
   mongo:
     container_name: mongo
-    image: mongo
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile
     command: mongod --replSet rs0
     ports:
       - '27017:27017'
       - '28017:28017'
     networks:
       - app-network
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.getMongo()"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
 networks:
   app-network:
