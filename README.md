@@ -6,5 +6,5 @@ How to use your app:
 5. The two emails can be created in the Json collection to be tried in Postman, go to the auth folder then register
 6. Specifically for messages-app, I provide a simple UI for logging in and sending messages by going to uri /messages-app
 7. The application has been provided with unit tests
-8. If there is an error in the messages-app container, you can type 'npx generate prisma'
+8. If there is an error in the messages-app container, you can fix with  type 'npx generate prisma' inside container and then restart the container
 9. To log in to the messages-app, use the account created in the profile-app
