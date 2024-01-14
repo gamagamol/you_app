@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "34ef8cae-42c9-4e45-b0d6-4e6fa2dbefbc",
+		"name": "you-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15644466"
+	},
+	"item": [
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTk5MTc1M2VkNGMxOWQ2OTJmOWNiZmEiLCJ1c2VybmFtZSI6ImdhbWFnYW1vbCIsImlhdCI6MTcwNDUzMzE1Nn0.dPNUg4U10m8mWL_yj5vHd0VFmUeX5UEpTLCeKUkKDrU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/profile/6597a3bbe31dc2aba6f68e68",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"6597a3bbe31dc2aba6f68e68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update after register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTk5MTc1M2VkNGMxOWQ2OTJmOWNiZmEiLCJ1c2VybmFtZSI6ImdhbWFnYW1vbCIsImlhdCI6MTcwNDUzMzE1Nn0.dPNUg4U10m8mWL_yj5vHd0VFmUeX5UEpTLCeKUkKDrU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Gama\",\n  \"gender\": \"Male\",\n  \"height\": 10,\n  \"weight\": 70,\n  \"birthday\": \"2023-02-26\",\n  \"heightUnit\":\"123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile/6597ccbceaa8053b5c0d709a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"6597ccbceaa8053b5c0d709a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/profile/65991753ed4c19d692f9cbfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"65991753ed4c19d692f9cbfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert interest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"interets\":\"qwe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile/interest/6597ccbceaa8053b5c0d709a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"interest",
+								"6597ccbceaa8053b5c0d709a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/gamaariefsadya/Pictures/picture256.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile/upload/6597ccbceaa8053b5c0d709a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"upload",
+								"6597ccbceaa8053b5c0d709a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete interest",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"interets\":\"qwe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile/interest/6597ccbceaa8053b5c0d709a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"interest",
+								"6597ccbceaa8053b5c0d709a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"email\":\"gamaariefsadya@gmail.com\",\n    \"email\":\"arief@gmail.com\",\n    \"username\":\"gamagamol\",\n    \"password\":\"gamagamol\",\n    \"confirmPassword\":\"gamagamol\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"gamaariefsadya@gmail.com\",\n    \"password\":\"gamagamol\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages-app",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTlhNWRkMjNhZTMzMTlkNjlhOGY5MmMiLCJ1c2VybmFtZSI6ImdhbWFnYW1vbCIsImlhdCI6MTcwNDYyNTQ5NH0.qhOWxYFhv0Oeit73dY1ndKwckQ36IqXVlRfAja7XNJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\":\"gamaariefsadya@gmail.com\",\n    \"to\":\"arief@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/messages-app/get_message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"messages-app",
+								"get_message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTlhNWRkMjNhZTMzMTlkNjlhOGY5MmMiLCJ1c2VybmFtZSI6ImdhbWFnYW1vbCIsImlhdCI6MTcwNDYyNTQ5NH0.qhOWxYFhv0Oeit73dY1ndKwckQ36IqXVlRfAja7XNJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\":\"gamaariefsadya@gmail.com\",\n    \"to\":\"arief@gmail.com\",\n    \"createdAt\":\"2023-12-31 12:00:00\",\n    \"message\":\"oy\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/messages-app/send_message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"messages-app",
+								"send_message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
